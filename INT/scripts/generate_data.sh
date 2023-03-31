@@ -1,0 +1,1 @@
+python DataHelper.py --data_path ./data/ordered_filed --proof_length 15 --data_size 120 --axiom_set ordered_field
