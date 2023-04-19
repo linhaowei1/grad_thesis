@@ -1,0 +1,38 @@
+Suppose d>=0, c^2+d>=0, c+2*d-1>=0, -b+c+d=0, prove that: (c^2+d)*(b+2*d-1)>=0
+[PROOF]
+Since we have:
+-b+c+d=0 => b=c+d
+The objective is simplified to:
+(c^2+d)*(b+2*d-1)>=0 => (c^2+d)*((c+d)+2*d-1)>=0 => (c^2+d)*(c+3*d-1)>=0
+Since we have:
+c^2+d>=0
+The objective is simplified to:
+c+3*d-1>=0
+Since we have:
+c+2*d-1>=0
+The objective is simplified to:
+d>=0
+[DONE]
+
+Suppose a-c+d=0, a+2*d>=0, prove that: 0>=0
+[PROOF]
+[DONE]
+
+Suppose a+b=0, prove that: (a+b+1)/(a+b+4)>=0
+[PROOF]
+Since we have:
+a+b=0 => a=-b
+The objective is simplified to:
+(a+b+1)/(a+b+4)>=0 => ((-b)+b+1)/((-b)+b+4)>=0 => (1)/(4)>=0 =>1/4>=0
+[DONE]
+
+Suppose -a+b+d=0, d+1>=0, prove that: (d+1)^2*(a-b-d)/(-a+b+d+1)>=0
+[PROOF]
+Since we have:
+-a+b+d=0 => a=b+d
+The objective is simplified to:
+(d+1)^2*((b+d)-b-d)/(-(b+d)+b+d+1)>=0 => (d+1)^2*(0)/(1)>=0 => 0>=0
+[DONE]
+
+Suppose a-c+d=0, a+2*d>=0, prove that -a**2+a*c-3*a*d+2*c*d-2*d**2>=0
+[PROOF]

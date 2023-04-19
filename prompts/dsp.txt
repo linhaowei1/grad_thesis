@@ -1,0 +1,39 @@
+[premises] d>=0, c**2+d>=0, c+2*d-1>=0, -b+c+d=0
+
+[goal] (c**2+d)*(b+2*d-1)>=0
+
+[proof]
+/* First, let's rewrite the fourth condition to express b in terms of c and d */
+
+premise [rewrite]: -b + c + d = 0 => b = c + d
+
+/* Now, let's substitute this expression for b in the inequality we want to prove */
+
+goal [b=c+d]: (c**2 + d) * (b + 2*d - 1) >= 0 => (c**2 + d) * (c + d + 2*d - 1) >= 0
+
+/* Simplify the inequality */
+
+goal [rewrite]: (c**2 + d) * (c + d + 2*d - 1) >= 0 => (c**2 + d) * (c + 3*d - 1) >= 0
+
+/* Now, let's analyze the factors of the inequality:
+Factor 1: c**2 + d >= 0 (given)
+Factor 2: c + 3*d - 1 >= 0
+We know that c + 2*d - 1 >= 0 (given). Since d >= 0, adding d to both sides of the inequality will not change the direction of the inequality: */
+
+premise [rewrite]: c + 2*d - 1 >= 0 => c + 3*d - 1 >= d
+
+/* Since d >= 0, we can conclude that c + 3*d - 1 >= 0. */
+
+premise [imply]: c + 3*d - 1 >= d, d >= 0 => c + 3*d - 1 >= 0
+
+/* Now we have both factors being non-negative: 
+1. c**2 + d >= 0
+2. c + 3*d - 1 >= 0
+The product of two non-negative numbers is non-negative. Therefore, (c**2 + d) * (c + 3*d - 1) >= 0, which is equivalent to the inequality we wanted to prove:*/
+
+premise [imply]: c**2 + d >= 0, c + 3*d - 1 >= 0 => (c**2 + d) * (c + 3*d - 1) >= 0
+
+/* we have the same premise and goal, thus the proof is done. */
+
+[DONE]
+

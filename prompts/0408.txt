@@ -1,0 +1,23 @@
+I want you to prove some inequalities. Here are some instructions:
+1. You can use [SYMPY] to request for equation simplification. For example, '((((a+c)*1)+(1*(((c+b)+a)+(-((a+c)+b)))))+((0+a)+c))' is complex, and [SYMPY] can simplify it to '2*a+2*c', which is simple.
+2. To show that something is greater than zero, you have 4 choices: (1) x**2>=0; (2) x>=0,y>=0 => x*y>=0; (3) x>=0,y>=0 => x+y>=0; (4) x>=0,y>=0 => x/y>=0
+3. If the proof is tested wrong, you need to fix it. For example, 'b-c+d=0 => b+c=d' is wrong, you should fix it as 'c=b+d'.
+Here is an example:
+Suppose d>=0, c^2+d>=0, c+2*d-1>=0, -b+c+d=0, prove that: (c^2+d)*(b+2*d-1)>=0
+[PROOF]
+Since we have:
+-b+c+d=0 => b=c+d
+The objective is simplified to (substitute b):
+[SYMPY]
+(c^2+d)*(b+2*d-1)>=0 => (c**2+d)*(c+3*d-1)>=0
+Since we have:
+c^2+d>=0
+The objective is simplified to (x>=0,y>=0 => x*y>=0):
+(c^2+d)*(c+3*d-1)>=0 => c+3*d-1>=0
+Since we have:
+c+2*d-1>=0
+The objective is simplified to (x>=0,y>=0 => x+y>=0):
+d>=0
+[DONE]
+
+Suppose c+d>=0, -a+b+d=0, -a+2*d=0, prove: 2*a*(c+d)*(a+c*(a+b)*(b+d)-c*(b+d)*(2*b+d)+2*d)>=0
